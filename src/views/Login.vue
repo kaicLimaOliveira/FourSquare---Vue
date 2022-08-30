@@ -92,8 +92,6 @@ import { useRouter } from "vue-router";
 import api from "../services/userServices";
 import { validateFormLogin, validateFormNewRegister, validatePasswordIsEqual } from "../composables/validateField"
 
-import Registration from '../views/Registration.vue'
-
 const router = useRouter();
 const state = reactive({
   email: "",
@@ -125,7 +123,7 @@ async function loginAccess() {
 }
 
 async function registerNewAccess() {
-  const requestData = {
+  const form = {
     email: state.email,
     password: state.password,
     passwordConfirmation: state.passwordTwo,
@@ -133,11 +131,11 @@ async function registerNewAccess() {
   }
 
   if (
-    validateFormNewRegister(requestData)
-    && validatePasswordIsEqual(requestData)
+    validateFormNewRegister(form)
+    && validatePasswordIsEqual(form)
   ) {
 
-    const response = api.register(requestData)
+    const response = api.register(form)
     const res = await response;
     console.log(res);
 

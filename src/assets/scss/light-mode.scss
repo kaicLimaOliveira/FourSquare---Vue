@@ -1,0 +1,25 @@
+.sidebar-light {
+    background-color: #f8f8f8 !important;
+
+    li {
+        background-color: #e6e5ed !important;
+
+        a,
+        .text,
+        .router-link-exact-active,
+        svg {
+            color: #2a2a2a !important;
+        }
+    }
+
+}
+
+.bg-lighting {
+    background-color: #e6e5ed !important;
+
+    h3,
+    .card-title,
+    .text-muted {
+        color: #2a2a2a !important;
+    }
+}

@@ -1,0 +1,27 @@
+.carousel__next,
+.carousel__prev {
+    background-color: #9466ff !important;
+    z-index: 100;
+    transition: all 0.2s;
+}
+
+.carousel__next {
+    right: 15px !important;
+
+    &:hover {
+        right: 19px !important;
+    }
+}
+
+.carousel__prev {
+    left: 14px !important;
+
+    &:hover {
+        left: 18px !important;
+    }
+}
+
+.carousel__viewport {
+    padding-bottom: 15px;
+    padding-top: 15px;
+}

@@ -5,6 +5,7 @@ import router from "./router/routes"
 
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap/dist/js/bootstrap.bundle'
+import 'vue3-carousel/dist/carousel.css';
 
 import { createPinia } from "pinia"
 

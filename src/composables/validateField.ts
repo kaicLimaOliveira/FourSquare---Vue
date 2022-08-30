@@ -1,8 +1,8 @@
 interface Obj {
     email: string;
     password: string;
-    passwordTwo?: string;
-    telephone?: string;
+    passwordConfirmation?: string;
+    phone?: string;
 }
 
 function validateFormLogin(obj: Obj): boolean {
@@ -19,8 +19,8 @@ function validateFormNewRegister(obj: Obj): boolean {
 
     if (!obj.email) validate = false;
     if (!obj.password) validate = false;
-    if (!obj.passwordTwo) validate = false;
-    if (!obj.telephone) validate = false;
+    if (!obj.passwordConfirmation) validate = false;
+    if (!obj.phone) validate = false;
 
     return validate;
 }
@@ -29,8 +29,8 @@ function validatePasswordIsEqual(obj: Obj): boolean {
     let validate = true;
 
     if (!obj.password) validate = false;
-    if (!obj.passwordTwo) validate = false;
-    if (obj.password != obj.passwordTwo) validate = false;
+    if (!obj.passwordConfirmation) validate = false;
+    if (obj.password != obj.passwordConfirmation) validate = false;
 
     return validate;
 }

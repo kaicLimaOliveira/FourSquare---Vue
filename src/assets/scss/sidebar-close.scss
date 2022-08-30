@@ -1,12 +1,11 @@
 .sidebar.close {
-    width: 80px !important;
-    transition: all 0.3s;
+    width: 90px !important;
 
     li {
         width: 55px;
     }
 
-    span.text {
+    .text {
         display: none !important;
     }
 
@@ -16,5 +15,9 @@
 
     .toggle {
         right: -7px;
+    }
+
+    .mode {
+        justify-content: center;
     }
 }

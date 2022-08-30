@@ -1,8 +1,8 @@
 <template>
-    <div class="d-flex" :class="store.isLoading ? 'loader-active' : ''">
+    <div class="d-flex" :class="[useStateStore.isLoading ? 'loader-active' : '']">
         <Sidebar class="ts-4" />
-        <div class="w-100 bg-default">
-            <div class="mt-4 mx-4 d-flex flex-column">
+        <div class="w-100 " :class="useDarkStore.isDark ? 'bg-default' : 'bg-lighting'">
+            <div class="my-5">
                 <RouterView v-slot="{ Component, route }">
                     <Transition name="fade" mode="out-in" :appear="false" :persisted="false">
                         <div :key="String(route.name)">
@@ -18,8 +18,10 @@
 <script setup lang="ts">
 import Sidebar from "../components/Sidebar.vue";
 import { stateStore } from "../store/stateStore"
+import { darkModeStore } from "../store/darkStore"
 
-const store = stateStore()
+const useStateStore = stateStore()
+const useDarkStore = darkModeStore()
 </script>
 
 <style lang="scss" scoped>
@@ -28,7 +30,7 @@ const store = stateStore()
 }
 
 .bg-default {
-    background-color: #f0f0f0;
+    background-color: #1d1d1d;
 }
 
 .loader-active {
